@@ -31,10 +31,10 @@ const values = [
 ]
 
 const stats = [
-  { value: '2017', label: 'Année de création', icon: Award },
-  { value: '500M', label: 'FCFA de capital', icon: TrendingUp },
-  { value: 'EMF II', label: 'Catégorie', icon: Building2 },
-  { value: 'Afrique Centrale', label: 'Zone de couverture', icon: Globe }
+  { value: '2017', label: 'Année de création', icon: Award, color: 'from-brand-ocean to-brand-sky' },
+  { value: '500M', label: 'FCFA de capital', icon: TrendingUp, color: 'from-brand-mint to-brand-ocean' },
+  { value: 'EMF II', label: 'Catégorie', icon: Building2, color: 'from-brand-sky to-brand-mint' },
+  { value: 'Afrique Centrale', label: 'Zone de couverture', icon: Globe, color: 'from-brand-ocean to-brand-navy' }
 ]
 
 export default function About() {

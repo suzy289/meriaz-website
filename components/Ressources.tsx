@@ -262,17 +262,17 @@ export default function Ressources() {
                                 <h4 className="font-semibold text-brand-navy group-hover:text-brand-ocean transition-colors">
                                   {item.title}
                                 </h4>
-                                {item.badge && (
+                                {'badge' in item && item.badge && (
                                   <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-700">
                                     {item.badge}
                                   </span>
                                 )}
                               </div>
                               <p className="text-sm text-slate-600 mb-1">{item.description}</p>
-                              {item.date && (
+                              {'date' in item && item.date && (
                                 <span className="text-xs text-slate-400">{item.date}</span>
                               )}
-                              {item.duration && (
+                              {'duration' in item && item.duration && (
                                 <span className="text-xs text-slate-400">Durée : {item.duration}</span>
                               )}
                             </div>
