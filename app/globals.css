@@ -3,25 +3,144 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-slate-950 text-white antialiased;
+  @apply bg-[#F2F6FB] text-brand-navy antialiased;
 }
 
 .glass-card {
-  @apply bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl shadow-2xl;
+  @apply bg-white border border-slate-100 rounded-3xl shadow-soft-lg;
 }
 
 .text-gradient {
-  background-image: linear-gradient(90deg, #f97316 0%, #f43f5e 50%, #a855f7 100%);
+  background-image: linear-gradient(90deg, #0f7dda 0%, #12b3b3 50%, #54d3ff 100%);
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .hero-grid {
-  background-image: radial-gradient(circle at top, rgba(117, 76, 255, 0.5), transparent 45%),
-    radial-gradient(circle at bottom, rgba(249, 115, 22, 0.35), transparent 55%);
+  background-image: radial-gradient(circle at top, rgba(93, 174, 255, 0.35), transparent 45%),
+    radial-gradient(circle at bottom, rgba(18, 179, 179, 0.25), transparent 55%);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer-bright {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 4s infinite;
+}
+
+.animate-shimmer-bright {
+  animation: shimmer-bright 3s infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-shimmer-delay-1 {
+  animation: shimmer 4s infinite;
+  animation-delay: 1s;
+}
+
+.animate-shimmer-delay-03 {
+  animation: shimmer 4s infinite;
+  animation-delay: 0.3s;
+}
+
+/* Animations pour le footer - Plus lentes et moins intenses */
+.animate-shimmer-footer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-shimmer-footer-bright {
+  animation: shimmer-bright 7s infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-shimmer-footer-delay-1 {
+  animation: shimmer 8s infinite;
+  animation-delay: 1s;
+}
+
+.animate-shimmer-footer-delay-03 {
+  animation: shimmer 8s infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes imageFade {
+  0%, 45% {
+    opacity: 1;
+  }
+  50%, 95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-image-fade {
+  animation: imageFade 8s infinite;
+}
+
+.animate-image-fade-delayed {
+  animation: imageFade 8s infinite;
+  animation-delay: 4s;
 }
 

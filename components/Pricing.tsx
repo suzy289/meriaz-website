@@ -58,7 +58,7 @@ export default function Pricing() {
 
   return (
     <section id="tarification" className="py-20 lg:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 via-transparent to-orange-900/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-brand-ice/80"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -68,10 +68,10 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-navy mb-6">
             Modèles de <span className="text-gradient">Tarification</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Des options flexibles adaptées à chaque étape de croissance de votre institution
           </p>
         </motion.div>
@@ -85,13 +85,13 @@ export default function Pricing() {
               viewport={{ once: true }}
               className={`relative rounded-3xl p-8 ${
                 plan.highlighted
-                  ? 'bg-gradient-to-br from-purple-600 to-orange-600 scale-105 shadow-2xl'
+                  ? 'bg-gradient-to-br from-brand-ocean to-brand-mint scale-105 shadow-soft-xl text-white'
                   : 'glass-card'
               }`}
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-orange-500 text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2">
+                  <div className="bg-brand-sunrise text-brand-navy px-6 py-2 rounded-full font-semibold flex items-center space-x-2 shadow-soft-lg">
                     <Star className="w-4 h-4 fill-current" />
                     <span>Plus Populaire</span>
                   </div>
@@ -99,16 +99,16 @@ export default function Pricing() {
               )}
 
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                <div className="text-3xl font-bold text-white mb-2">{plan.price}</div>
-                <div className="text-gray-200 text-sm mb-4">{plan.onboarding}</div>
-                <p className="text-gray-200">{plan.description}</p>
+                <h3 className={`text-2xl font-bold mb-4 ${plan.highlighted ? 'text-white' : 'text-brand-navy'}`}>{plan.name}</h3>
+                <div className={`text-3xl font-bold mb-2 ${plan.highlighted ? 'text-white' : 'text-brand-ocean'}`}>{plan.price}</div>
+                <div className={`text-sm mb-4 ${plan.highlighted ? 'text-brand-ice/80' : 'text-slate-500'}`}>{plan.onboarding}</div>
+                <p className={plan.highlighted ? 'text-brand-ice' : 'text-slate-600'}>{plan.description}</p>
               </div>
 
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start text-gray-200">
-                    <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                  <li key={idx} className={`flex items-start ${plan.highlighted ? 'text-brand-ice' : 'text-slate-600'}`}>
+                    <Check className={`w-5 h-5 mr-3 mt-0.5 flex-shrink-0 ${plan.highlighted ? 'text-white' : 'text-emerald-500'}`} />
                     <span className="text-sm leading-relaxed">{feature}</span>
                   </li>
                 ))}
@@ -116,8 +116,8 @@ export default function Pricing() {
 
               <button className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
                 plan.highlighted
-                  ? 'bg-white text-black hover:bg-gray-100 hover:scale-105'
-                  : 'bg-orange-500 text-white hover:bg-orange-600 hover:scale-105'
+                  ? 'bg-white text-brand-navy hover:bg-brand-ice hover:scale-105'
+                  : 'bg-gradient-to-r from-brand-ocean to-brand-sky text-white hover:shadow-soft-lg hover:scale-105'
               }`}>
                 Choisir ce Plan
               </button>
@@ -131,7 +131,7 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-gray-300 text-lg">
+          <p className="text-slate-600 text-lg">
             🔒 Tous les plans incluent la sécurité bancaire, la conformité COBAC et les mises à jour logicielles
           </p>
         </motion.div>

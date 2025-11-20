@@ -13,10 +13,18 @@ const config: Config = {
       },
       colors: {
         brand: {
-          purple: "#8854FF",
-          orange: "#FF6B2C",
-          blue: "#1A73E8"
+          navy: "#0F1D40",
+          ocean: "#1565C0",
+          sky: "#5DAEFF",
+          ice: "#F5F8FF",
+          slate: "#4A5975",
+          mint: "#12B3B3",
+          sunrise: "#FFC15E"
         }
+      },
+      boxShadow: {
+        "soft-lg": "0 18px 50px rgba(15, 29, 64, 0.12)",
+        "soft-xl": "0 30px 120px rgba(15, 29, 64, 0.12)"
       }
     }
   },

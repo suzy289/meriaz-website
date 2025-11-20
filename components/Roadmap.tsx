@@ -45,7 +45,7 @@ export default function Roadmap() {
 
   return (
     <section className="py-20 lg:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/10 via-transparent to-purple-900/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-brand-ice"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -55,10 +55,10 @@ export default function Roadmap() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-navy mb-6">
             Innovation & <span className="text-gradient">Expansion</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Des modules innovants et une vision régionale pour l'avenir de la microfinance en Afrique
           </p>
         </motion.div>
@@ -76,13 +76,13 @@ export default function Roadmap() {
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
+              <h3 className="text-2xl font-bold text-brand-navy mb-4">{feature.title}</h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">{feature.description}</p>
 
               <ul className="space-y-3">
                 {feature.features.map((item, idx) => (
-                  <li key={idx} className="flex items-start text-gray-300 text-sm">
-                    <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                  <li key={idx} className="flex items-start text-slate-600 text-sm">
+                    <div className="w-1.5 h-1.5 bg-brand-ocean rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -97,15 +97,15 @@ export default function Roadmap() {
           viewport={{ once: true }}
           className="glass-card p-8 lg:p-12"
         >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">Expansion Régionale</h3>
+          <h3 className="text-3xl font-bold text-brand-navy text-center mb-12">Expansion Régionale</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {expansion.map((item, index) => (
               <div key={item.title} className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-orange-500 rounded-2xl flex items-center justify-center">
                   <span className="text-white font-bold text-2xl">{index + 1}</span>
                 </div>
-                <h4 className="text-xl font-bold text-white mb-4">{item.title}</h4>
-                <p className="text-gray-300 leading-relaxed">{item.description}</p>
+                <h4 className="text-xl font-bold text-brand-navy mb-4">{item.title}</h4>
+                <p className="text-slate-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>

@@ -37,7 +37,7 @@ export default function Architecture() {
 
   return (
     <section id="technologie" className="py-20 lg:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-transparent to-blue-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-brand-ice"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -47,10 +47,10 @@ export default function Architecture() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-navy mb-6">
             Architecture <span className="text-gradient">Technique</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Conception robuste et évolutive pour supporter la croissance de votre institution
           </p>
         </motion.div>
@@ -68,13 +68,13 @@ export default function Architecture() {
                 <layer.icon className="w-8 h-8 text-white" />
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-4">{layer.title}</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">{layer.description}</p>
+              <h3 className="text-xl font-bold text-brand-navy mb-4">{layer.title}</h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">{layer.description}</p>
 
               <ul className="space-y-2">
                 {layer.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-300 text-sm">
-                    <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2"></div>
+                  <li key={idx} className="flex items-center text-slate-600 text-sm">
+                    <div className="w-1.5 h-1.5 bg-brand-ocean rounded-full mr-2"></div>
                     {feature}
                   </li>
                 ))}
@@ -89,7 +89,7 @@ export default function Architecture() {
           viewport={{ once: true }}
           className="glass-card p-8 lg:p-12"
         >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">Écosystème Technique Meriaz</h3>
+          <h3 className="text-3xl font-bold text-brand-navy text-center mb-12">Écosystème Technique Kazimo</h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
@@ -110,11 +110,11 @@ export default function Architecture() {
                 components: ["AWS/Azure", "Load Balancing", "Monitoring 24/7"]
               }
             ].map((stack) => (
-              <div key={stack.layer} className="bg-white/5 rounded-2xl p-6">
-                <h4 className="text-orange-400 font-bold text-lg mb-4">{stack.layer}</h4>
+              <div key={stack.layer} className="bg-brand-ice rounded-2xl p-6">
+                <h4 className="text-brand-ocean font-bold text-lg mb-4">{stack.layer}</h4>
                 <ul className="space-y-2">
                   {stack.components.map((component) => (
-                    <li key={component} className="text-gray-300 text-sm">
+                    <li key={component} className="text-slate-600 text-sm">
                       {component}
                     </li>
                   ))}
